@@ -1,0 +1,21 @@
+@import '../../scss/variables';
+
+.listItem {
+  margin-right: 1.2rem;
+
+  .active {
+    color: $accent-primary;
+  }
+
+  .signOutBtn {
+    background-color: inherit;
+    color: inherit;
+    font-size: inherit;
+  }
+}
+
+// .noMobileView {
+//   @media(max-width: 575px) {
+//     display: none;
+//   }
+// }

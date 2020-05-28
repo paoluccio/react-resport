@@ -1,0 +1,45 @@
+@import '../../../scss/variables';
+
+.button {
+  padding: 0.6rem 1.5rem;
+  font-size: 1.2rem;
+  line-height: 1;
+  backface-visibility: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.15s ease-in;
+
+  @media(max-width: 425px) {
+    font-size: 1.1rem;
+    padding: 0.5rem 0.8rem;
+  }
+
+  &.primary {
+    color: $dark-primary;
+    background-color: $accent-primary;
+  }
+
+  &.adjustable {
+    @media(max-width: 976px) {
+      background-color: unset;
+      text-decoration: underline;
+      padding: 0;
+      font-size: 1.1rem;
+      color: $dark-primary;
+
+      &:hover,
+      &:focus {
+        background-color: unset;
+      }
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background-color: lighten($accent-primary, 10%);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}

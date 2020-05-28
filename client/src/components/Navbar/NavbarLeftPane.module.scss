@@ -1,0 +1,35 @@
+.leftPane {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+
+  .linkedLogo {
+    width: 100px;
+    height: 100%;
+    margin-right: 3rem;
+
+    @media(max-width: 768px) {
+      margin-right: 1.5rem;
+    }
+
+    @media(max-width: 575px) {
+      margin-right: 0;
+    }
+  }
+
+  .homeLink {
+    display: inline-block;
+    height: 100%;
+  }
+
+  .list {
+    display: flex;
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+
+    @media(max-width: 575px) {
+      display: none;
+    }
+  }
+}

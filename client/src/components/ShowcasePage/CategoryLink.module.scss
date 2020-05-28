@@ -1,0 +1,45 @@
+@import '../../scss/variables';
+
+.listItem {
+  border-radius: 0.2rem;
+  overflow: hidden;
+
+  .link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 1rem;
+    background-color: $dark-secondary;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: rgba($dark-secondary, 1);
+    }
+
+    @media(max-width: 768px) {
+      padding: 0.5rem 1rem;
+    }
+
+    @media(max-width: 425px) {
+      padding: 0.3rem 0.8rem;
+    }
+  }
+
+  .icon {
+    width: 2.8rem;
+    height: 2.8rem;
+
+    @media(max-width: 768px) {
+      width: 2.3rem;
+      height: 2.3rem;
+    }
+  }
+
+  .mens {
+    fill: $masculine-primary;
+  }
+
+  .womens {
+    fill: $feminine-primary;
+  }
+}

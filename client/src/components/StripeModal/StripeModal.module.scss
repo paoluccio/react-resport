@@ -1,0 +1,30 @@
+@import '../../scss/variables';
+
+.modal {
+  width: 400px;
+  height: 450px;
+  padding: 1rem 2.5rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $light-tertiary;
+  border-radius: 0.2rem;
+  z-index: $modal-z-index;
+
+  @media(max-width: 425px) {
+    width: 95%;
+    height: 400px;
+    padding: 1rem;
+  }
+}
+
+.hint {
+  width: 100%;
+  position: fixed;
+  bottom: 1%;
+  text-align: center;
+  font-family: 'Calibri', sans-serif;
+  color: #fff;
+  z-index: $modal-z-index;
+}

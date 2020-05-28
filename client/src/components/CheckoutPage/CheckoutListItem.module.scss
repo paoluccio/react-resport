@@ -1,0 +1,164 @@
+@import '../../scss/variables';
+
+.listItem {
+  display: flex;
+  background-color: $light-secondary;
+
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+
+    @media(max-width: 425px) {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  .imageBox {
+    width: 120px;
+    height: 120px;
+
+    @media(max-width: 976px) {
+      width: 100px;
+      height: 100px;
+    }
+
+    @media(max-width: 768px) {
+      width: 120px;
+      height: 120px;
+    }
+
+    @media(max-width: 575px) {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1rem 0.2rem;
+
+    @media(max-width: 575px) {
+      flex-direction: row;
+      padding: 0.5rem 0.5rem 0.2rem;
+    }
+  }
+
+  .header {
+    flex-grow: 1;
+    text-align: right;
+
+    @media(max-width: 976px) {
+      font-size: 0.9rem;
+    }
+
+    @media(max-width: 768px) {
+      font-size: 1rem;
+    }
+
+    @media(max-width: 575px) {
+      order: 1;
+      flex-grow: 0;
+    }
+
+    @media(max-width: 425px) {
+      display: none;
+    }
+  }
+
+  .body {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    color: $dark-primary;
+    font-size: 1.1rem;
+
+    @media(max-width: 976px) {
+      font-size: 1rem;
+    }
+
+    @media(max-width: 768px) {
+      font-size: 1.1rem;
+    }
+
+    @media(max-width: 575px) {
+      flex-grow: 1;
+      flex-direction: column;
+      align-items: initial;
+    }
+  }
+
+  .brandAndNameBox {
+    flex-grow: 1;
+
+    &>span {
+      display: block;
+    }
+
+    @media(max-width: 976px) {
+      font-size: 1rem;
+    }
+
+    @media(max-width: 768px) {
+      font-size: 1.1rem;
+    }
+
+    @media(max-width: 575px) {
+      font-size: 1rem;
+    }
+  }
+
+  .brand {
+    color: $accent-secondary;
+    font-size: 1rem;
+
+    @media(max-width: 575px) {
+      margin-bottom: 0.2rem;
+    }
+  }
+
+  .controls {
+    flex: 0 0 35%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media(max-width: 575px) {
+      flex: initial;
+      width: 120px;
+    }
+
+    @media(max-width: 425px) {
+      width: auto;
+    }
+  }
+
+  .quantity {
+    flex: 0 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media(max-width: 976px) {
+      flex-basis: 35px;
+    }
+
+    @media(max-width: 768px) {
+      flex-basis: 40px;
+    }
+  }
+
+  .mens {
+    color: $masculine-primary;
+  }
+
+  .womens {
+    color: $feminine-primary;
+  }
+}

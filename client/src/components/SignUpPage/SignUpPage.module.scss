@@ -1,0 +1,35 @@
+@import '../../scss/variables';
+
+.formPane {
+  width: 50%;
+  padding: 1.5rem 2.5rem;
+  background-color: $light-tertiary;
+
+  @media(max-width: 976px) {
+    width: 100%;
+  }
+
+  @media(max-width: 425px) {
+    padding: 1.3rem 1rem;
+  }
+}
+
+.dialoguePane {
+  width: 50%;
+  color: $light-primary;
+  background-color: $dark-primary;
+
+  &.head {
+    order: -1;
+  }
+
+  @media(max-width: 976px) {
+    width: 100%;
+    background-color: #8d6e63;
+    padding: 0.8rem;
+
+    &.head {
+      order: 0;
+    }
+  }
+}

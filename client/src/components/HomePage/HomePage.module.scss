@@ -1,0 +1,84 @@
+@import '../../scss/variables';
+
+.home {
+  min-height: 100%;
+  background-size: cover;
+  background-position: left;
+
+  .container {
+    max-width: $container-width;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: $container-padding;
+
+    @media(max-width: 976px) {
+      justify-content: flex-end;
+      padding: 0;
+    }
+  }
+
+  .slogan {
+    font-size: calc(1.5rem + 3vw);
+    color: rgba(172, 68, 17, 0.75);
+    text-align: right;
+    margin-top: 4rem;
+    line-height: 1.2;
+
+    @media(max-width: 976px) {
+      display: none;
+    }
+  }
+
+  .buttonsBox {
+    width: 300px;
+    height: 80px;
+    margin: 2rem 0 0.5rem auto;
+    color: $light-primary;
+    font-size: 1.2rem;
+    position: relative;
+    filter: drop-shadow(-3px 12px 2px rgba(0, 0, 0, 0.7));
+
+    @media(max-width: 976px) {
+      margin: 0 1rem 1rem auto;
+    }
+
+    @media(max-width: 425px) {
+      margin: 0 auto 0.5rem;
+      width: 250px;
+      height: 70px;
+    }
+  }
+
+  .homeButton {
+    display: flex;
+    justify-content: center;
+    width: 65%;
+    height: 100%;
+    padding: 0.5rem;
+    transition: top 0.1s ease-in;
+
+    &:active {
+      top: 2px;
+    }
+  }
+
+  .mens {
+    align-items: flex-end;
+    background-color: $masculine-primary;
+    position: absolute;
+    top: 0;
+    left: 0;
+    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  }
+
+  .womens {
+    align-items: flex-start;
+    background-color: $feminine-primary;
+    position: absolute;
+    top: 0;
+    right: 0;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+  }
+}

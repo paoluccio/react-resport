@@ -1,0 +1,44 @@
+@import '../../scss/variables';
+
+.listItem {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.1rem;
+  user-select: none;
+
+  .header {
+    height: 400px;
+    flex: 1 1 auto;
+    position: relative;
+
+    @media(max-width: 920px) {
+      height: 350px;
+    }
+
+    @media(max-width: 575px) {
+      height: 500px;
+    }
+
+    @media(max-width: 375px) {
+      height: 380px;
+    }
+  }
+
+  .brandAndIcon {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 0 0.4rem 0.1rem 0.6rem;
+    color: $accent-tertiary;
+    fill: $accent-tertiary;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.2rem 0.6rem 0;
+  }
+}

@@ -1,0 +1,31 @@
+@import '../../scss/variables';
+
+.loft {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.3rem;
+  padding: 0.7rem 1rem;
+  background-color: $dark-primary;
+  color: $light-primary;
+  box-shadow: 0 1px 2px $dark-primary;
+  z-index: 1;
+}
+
+.leftPane {
+  display: flex;
+
+  .closeIcon {
+    margin-right: 1.5rem;
+    color: $attention-primary;
+  }
+
+  .totalText {
+    margin-right: 0.2rem;
+    color: $accent-primary;
+  }
+
+  .totalBuck {
+    margin-right: 0.2rem;
+  }
+}

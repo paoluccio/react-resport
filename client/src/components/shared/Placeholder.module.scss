@@ -1,0 +1,14 @@
+@import '../../scss/variables';
+
+.placeholder {
+  width: 100%;
+  height: 100%;
+  color: lighten($text-primary, 30%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+}

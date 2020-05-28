@@ -1,0 +1,42 @@
+@import '../../scss/variables';
+
+.ordersList {
+  padding: 0 0.3rem;
+
+  .singleOrder {
+    &:not(:last-child) {
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid #f3f0f0;
+
+      @media(max-width: 768px) {
+        border-bottom-color: $light-tertiary;
+      }
+    }
+  }
+
+  .orderId {
+    margin-bottom: 0.2rem;
+    padding: 0 0.5rem;
+    color: lighten($text-primary, 40%);
+  }
+
+  .orderDetails {
+    padding: 1rem 0.5rem;
+    text-align: right;
+    color: lighten($text-primary, 40%);
+  }
+
+  .itemsTotal,
+  .amountTotal {
+    margin-right: 1rem;
+  }
+
+  .receipt {
+    color: $accent-secondary;
+    text-decoration: underline;
+
+    &:hover {
+      color: lighten($accent-secondary, 10%);
+    }
+  }
+}

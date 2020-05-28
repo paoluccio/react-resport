@@ -1,0 +1,17 @@
+@import '../../scss/variables';
+
+.menu {
+  width: 420px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: $light-secondary;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: $bag-menu-z-index;
+
+  @media(max-width: 425px) {
+    width: 100%;
+  }
+}

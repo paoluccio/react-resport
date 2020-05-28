@@ -1,0 +1,14 @@
+@import '../../scss/variables';
+
+.image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.filler {
+  width: 100%;
+  height: 100%;
+  background-color: $light-secondary;
+}

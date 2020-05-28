@@ -1,0 +1,44 @@
+@import '../../scss/variables';
+
+.listItem {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0.3rem;
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: 0.3rem;
+    border-bottom: 1px solid $light-tertiary;
+  }
+
+  .image {
+    height: 100%;
+    width: 25%;
+    object-fit: cover;
+  }
+
+  .details {
+    text-align: right;
+
+    &>span {
+      display: block;
+    }
+  }
+
+  .brand {
+    color: $accent-secondary;
+  }
+
+  .controls {
+    width: 45px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-30%);
+    transition: opacity 0.1s ease-in;
+  }
+}

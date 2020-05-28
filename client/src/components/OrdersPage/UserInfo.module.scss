@@ -1,0 +1,75 @@
+@import '../../scss/variables';
+
+.info {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    @media(max-width: 768px) {
+      margin-bottom: 0;
+    }
+
+    .initialsBox {
+      width: 75px;
+      height: 75px;
+      color: $light-primary;
+      background-color: $dark-primary;
+      border-radius: 50%;
+      position: relative;
+
+      @media(max-width: 768px) {
+        width: 50px;
+        height: 50px;
+      }
+
+      .initials {
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 3.2rem;
+
+        @media(max-width: 768px) {
+          font-size: 2.2rem;
+        }
+      }
+    }
+
+    .userData {
+      text-align: right;
+      font-family: Calibri;
+      font-size: 1.1rem;
+
+      @media(max-width: 768px) {
+        font-size: 1rem;
+      }
+
+      &>* {
+        display: block;
+      }
+    }
+  }
+
+  .footer {
+    margin-top: auto;
+
+    @media(max-width: 768px) {
+      display: none;
+    }
+
+    &>* {
+      display: block;
+    }
+
+    .dateOfJoining {
+      margin-bottom: 0.3rem;
+    }
+  }
+}

@@ -1,0 +1,79 @@
+@import '../../scss/variables';
+
+.summary {
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $dark-primary;
+
+  @media(max-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .heading {
+    display: inline-block;
+    font-size: 3rem;
+    margin-bottom: 120px;
+    position: relative;
+
+    &::after {
+      content: '';
+      width: 100%;
+      position: absolute;
+      top: 90%;
+      left: 0;
+      border-left: 4.55rem solid transparent;
+      border-right: 4.55rem solid transparent;
+      border-top: 5.5rem solid $dark-primary;
+      filter: drop-shadow(0px 2px 1px black);
+    }
+
+    @media(max-width: 768px) {
+      display: none;
+    }
+  }
+
+  .details {
+    font-size: 1.5rem;
+    margin-bottom: 7rem;
+
+    @media(max-width: 768px) {
+      display: flex;
+      margin: 0;
+    }
+
+    @media(max-width: 425px) {
+      font-size: 1.2rem;
+    }
+
+    &>span {
+      display: block;
+    }
+
+    &>:first-child {
+      margin-bottom: 0.3rem;
+
+      @media(max-width: 768px) {
+        display: none;
+      }
+    }
+
+    &>:last-child span:first-of-type {
+      @media(max-width: 425px) {
+        display: none;
+      }
+    }
+  }
+
+  .value {
+    color: #3949ab;
+
+    @media(max-width: 425px) {
+      display: block;
+      margin: 0;
+    }
+  }
+}

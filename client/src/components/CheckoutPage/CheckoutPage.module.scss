@@ -1,0 +1,111 @@
+@import '../../scss/variables';
+
+.checkout {
+  background-color: $dark-tertiary;
+
+  &::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8rem;
+    background-color: $dark-tertiary;
+    z-index: $header-filler-z-index;
+
+    @media(max-width: 976px) {
+      height: 6rem;
+    }
+
+    @media(max-width: 768px) {
+      height: 5.5rem;
+    }
+  }
+
+  .container {
+    max-width: $container-width;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: $container-padding;
+
+    @media(max-width: 976px) {
+      padding-top: 6rem;
+    }
+
+    @media(max-width: 768px) {
+      padding: 5rem 1rem 0;
+      flex-direction: column;
+    }
+
+    @media(max-width: 575px) {
+      padding: 5rem 0.5rem 0;
+    }
+  }
+
+  .leftPane {
+    flex: 0 1 60%;
+    margin-bottom: 0.5rem;
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 0.2rem;
+
+    @media(max-width: 768px) {
+      margin: 4.5rem 0 0.5rem;
+      padding: 0 1rem;
+      background-color: $dark-tertiary;
+    }
+
+    @media(max-width: 575px) {
+      padding: 0 0.5rem;
+    }
+
+    @media(max-width: 425px) {
+      padding: 0;
+    }
+  }
+
+  .rightPane {
+    flex: 0 0 35%;
+    height: calc(100vh - 8.5rem);
+    position: sticky;
+    top: 8rem;
+    padding: 1.5rem;
+    background-color: $accent-quaternary;
+    border-radius: 0.2rem;
+
+    @media(max-width: 976px) {
+      top: 6rem;
+      height: calc(100vh - 7rem);
+    }
+
+    @media(max-width: 768px) {
+      width: calc(100% - 2rem);
+      height: auto;
+      position: fixed;
+      top: 5.5rem;
+      padding: 0 1rem;
+      background-color: $dark-tertiary;
+      border-radius: unset;
+
+      &::after {
+        content: '';
+        width: 100%;
+        height: 1rem;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: $dark-tertiary;
+      }
+    }
+
+    @media(max-width: 575px) {
+      width: calc(100% - 1rem);
+    }
+
+    @media(max-width: 425px) {
+      padding: 0 0.5rem;
+    }
+  }
+}

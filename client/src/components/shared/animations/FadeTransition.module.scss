@@ -1,0 +1,83 @@
+// Plain smooth fade
+.basic-enter {
+  opacity: 0;
+}
+
+.basic-enter-active {
+  opacity: 1;
+  transition: opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.basic-exit {
+  opacity: 1;
+}
+
+.basic-exit-active {
+  opacity: 0;
+  transition: opacity 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.basic2-enter {
+  opacity: 0.7;
+}
+
+.basic2-enter-active {
+  opacity: 1;
+  transition: opacity 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.basic3-enter {
+  opacity: 0;
+}
+
+.basic3-enter-active {
+  opacity: 1;
+  transition: opacity 0.6s 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+// Fade 'n' scale
+.scale1-enter {
+  opacity: 0;
+  transform: scale(0.1);
+}
+
+.scale1-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.4s 0.3s ease-in, transform 0.4s 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.scale2-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.scale2-exit-active {
+  opacity: 0;
+  transform: scale(0.1);
+  transition: opacity 0.4s ease-out, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.scale3-enter {
+  opacity: 0;
+  transform: scale(0.9);
+  position: absolute;
+}
+
+.scale3-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.15s 0.2s ease-out, transform 0.2s 0.2s ease-out;
+}
+
+.scale3-exit {
+  opacity: 1;
+  transform: scale(1);
+  position: absolute;
+}
+
+.scale3-exit-active {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.15s ease-out, transform 0.2s ease-out;
+}
