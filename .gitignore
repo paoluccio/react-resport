@@ -1,0 +1,11 @@
+# dependencies
+node_modules
+
+# firestore data
+/client/src/data
+
+# production build
+/client/src/build
+
+# environment variables
+.env
